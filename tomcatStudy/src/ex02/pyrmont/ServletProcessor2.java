@@ -9,6 +9,8 @@ import javax.servlet.Servlet;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
+import org.apache.catalina.Connector;
+
 public class ServletProcessor2 {
 
   public void process(Request request, Response response) {
@@ -40,7 +42,7 @@ public class ServletProcessor2 {
     catch (ClassNotFoundException e) {
       System.out.println(e.toString());
     }
-
+    
     Servlet servlet = null;
     RequestFacade requestFacade = new RequestFacade(request);
     ResponseFacade responseFacade = new ResponseFacade(response);
